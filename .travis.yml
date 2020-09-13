@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 'stable'
+install: npm install
+services:
+  - mongodb
+before_script:
+  - mongod
+script: npm test

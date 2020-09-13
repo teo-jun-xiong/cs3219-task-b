@@ -5,5 +5,5 @@ install: npm install
 services:
   - mongodb
 before_script:
-  - mongod
+    - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: npm test

@@ -3,7 +3,6 @@ const Mod = require("../models/mod.model.js");
 // Create and Save a new Mod
 exports.create = (req, res) => {
   // Validate request
-
   if (!req.body.code) {
     return res.status(400).send({
       message: "Module code cannot be empty",
@@ -69,7 +68,7 @@ exports.update = (req, res) => {
   // Validate Request
   if (!req.body.code) {
     return res.status(400).send({
-      message: "Moule code cannot be empty",
+      message: "Module code cannot be empty",
     });
   }
 

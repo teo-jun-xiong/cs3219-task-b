@@ -1,11 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+var autoIncrement = require("mongoose-sequence")(mongoose);
 
-const ModSchema = mongoose.Schema({
+const ModSchema = mongoose.Schema(
+  {
+    _id: Number,
     name: String,
     code: String,
-    grade: String
-}, {
-    timestamps: true
-});
+    grade: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
-module.exports = mongoose.model('Mod', ModSchema);
+ModSchema.plugin(autoIncrement, { id: "order_seq", inc_field: "_id" });
+module.exports = mongoose.model("Mod", ModSchema);

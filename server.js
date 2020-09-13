@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 const dbConfig = require("./config/database.config.js");
 const mongoose = require("mongoose");
 
-mongoose.set('useFindAndModify', false);
+mongoose.set("useFindAndModify", false);
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
@@ -45,3 +45,5 @@ require("./app/routes/mod.routes.js")(app);
 app.listen(3000, () => {
   console.log("Server is listening on port " + 3000);
 });
+
+module.exports = app;

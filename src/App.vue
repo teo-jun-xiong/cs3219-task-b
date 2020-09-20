@@ -22,7 +22,7 @@
 
     <div class="fixed-bottom">
         <p class="text-center"><kbd>Done by Teo Jun Xiong</kbd><br/><kbd>GitHub repository below</kbd></p>
-      <a href="https://github.com/teo-jun-xiong">
+      <a href="https://github.com/teo-jun-xiong/cs3219-task-b/tree/task-b4">
         <img src="./assets/github.png" width="60px" />
       </a>
     </div>
